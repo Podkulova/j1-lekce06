@@ -1,6 +1,7 @@
 package cz.czechitas.lekce6.nakupniseznam;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NakupniSeznam {
@@ -27,7 +28,10 @@ public class NakupniSeznam {
      * Naplní seznam alespoň 4 položkami.
      */
     private void naplnSeznam() {
-        //TODO
+        seznam.add(new Polozka("meloun", 4, "ks"));
+        seznam.add(new Polozka("banán", 8, "ks"));
+        seznam.add(new Polozka("jablko", 12, "ks"));
+        seznam.add(new Polozka("hruška", 2, "ks"));
     }
 
     /**
@@ -36,22 +40,25 @@ public class NakupniSeznam {
      * @return
      */
     private Polozka ziskejTretiPolozku() {
-        //TODO
-        return null;
+        if (seznam.size() >= 3) {
+            return seznam.get(2);
+        } else {
+            return null;
+        }
     }
 
     /**
      * Smaže druhou položku ze seznamu.
      */
     private void smazDruhouPolozku() {
-        //TODO
+        seznam.remove(1);
     }
 
     /**
      * Přidá novou položku na konec seznamu.
      */
     private void pridejDalsiPolozku() {
-        //TODO
+        seznam.add(new Polozka("ananas", 6,"ks"));
     }
 
     @Override
